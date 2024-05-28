@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +62,67 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+textarea {
+  resize: none;
+  overflow-y: auto;
+}
+
+.undoneItem {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  margin: 10px;
+}
+
+.doneButton {
+  width: 50%;
+  justify-self: left;
+  cursor: pointer;
+  flex-basis: 7%;
+  flex-shrink: 0;
+}
+
+.deleteButton {
+  height: 50%;
+  place-self: center;
+  cursor: pointer;
+  flex-basis: content;
+  flex-shrink: 0;
+}
+
+.undoneItem>p {
+  text-align: left;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.addItem {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  gap: 5%;
+}
+
+.input {
+  flex-grow: 1;
+}
+
+.addButton {
+  flex-basis: content;
+  flex-shrink: 0;
+}
+
+.doneItem > p{
+  overflow: auto;
+  text-align: left;
 }
