@@ -98,6 +98,21 @@ export default function MyApp() {
       id: items.length
     }
 
+
+    if (items == "")
+      itemJson.id = 0;
+
+    else {
+      for (let i = 0; i < items.length; i++) {
+        if (JSON.parse(items[i]).id != i) {
+          itemJson.id = i;
+          break;
+        }
+      }
+    }
+
+
+
     items.push(JSON.stringify(itemJson));
     localStorage.setItem("undoneItems", items.join('|'));
 
@@ -150,7 +165,7 @@ function UndoneItem(item, updateUndone, updateDone) {
 
     let itemsDone = localStorage.getItem("doneItems").split('|');
     itemCopy.id = itemsDone.length;
-    if(itemsDone == "")
+    if (itemsDone == "")
       itemCopy.id = 0;
 
     itemsDone.push(JSON.stringify(itemCopy));
