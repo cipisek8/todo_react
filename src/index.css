@@ -82,6 +82,8 @@ textarea {
   gap: 5%;
   justify-content: center;
   margin: 10px;
+  min-width: 500px;
+  list-style-type: none;
 }
 
 .doneButton {
