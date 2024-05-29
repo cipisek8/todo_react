@@ -106,6 +106,13 @@ textarea {
   text-align: left;
   overflow: auto;
   flex-grow: 1;
+max-height: 10vh;
+}
+
+.doneItem > p{
+  overflow: auto;
+  text-align: left;
+  max-height: 10vh;
 }
 
 .addItem {
@@ -122,9 +129,4 @@ textarea {
 .addButton {
   flex-basis: content;
   flex-shrink: 0;
-}
-
-.doneItem > p{
-  overflow: auto;
-  text-align: left;
 }
