@@ -150,6 +150,8 @@ function UndoneItem(item, updateUndone, updateDone) {
 
     let itemsDone = localStorage.getItem("doneItems").split('|');
     itemCopy.id = itemsDone.length;
+    if(itemsDone == "")
+      itemCopy.id = 0;
 
     itemsDone.push(JSON.stringify(itemCopy));
     localStorage.setItem("doneItems", itemsDone.join('|'));
