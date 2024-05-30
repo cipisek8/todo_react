@@ -53,6 +53,9 @@ export default function MyApp() {
     }
 
     localStorage.setItem("undoneItems", items.join('|'));
+
+items.reverse();
+
     return items.map(item => {
       let itemJson = JSON.parse(item);
       return UndoneItem(itemJson, SetUndoneItems, SetDoneItems);
@@ -78,6 +81,7 @@ export default function MyApp() {
     }
 
     localStorage.setItem("doneItems", items.join('|'));
+    items.reverse();
 
     return items.map(item => {
       let itemJson = JSON.parse(item);
