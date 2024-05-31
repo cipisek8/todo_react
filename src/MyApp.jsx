@@ -18,9 +18,6 @@ export default function MyApp() {
     let items = [];
     let i = 0;
 
-    if ((localStorage.getItem("undoneItems") == null) || (localStorage.getItem("undoneItems") == undefined))
-      return null;
-
     for (let item of localStorage.getItem("undoneItems").split('|')) {
       if ((item != null) && (item != undefined) && (item != "")) {
         items[i] = item;
@@ -45,9 +42,6 @@ export default function MyApp() {
   function UpdateDoneItems() {
     let items = [];
     let i = 0;
-
-    if ((localStorage.getItem("doneItems") == null) || (localStorage.getItem("doneItems") == undefined))
-      return null;
 
     for (let item of localStorage.getItem("doneItems").split('|')) {
       if ((item != null) && (item != undefined) && (item != "")) {
@@ -78,13 +72,15 @@ export default function MyApp() {
       id: items.length
     };
 
-
     if (items == "")
       itemJson.id = 0;
-
     else {
+      let ids = [];
       for (let i = 0; i < items.length; i++) {
-        if (JSON.parse(items[i]).id != i) {
+        ids[i] = JSON.parse(items[i]).id;
+      }
+      for (let i = 0; i < items.length; i++) {
+        if (!ids.includes(JSON.parse(items[i]).id)) {
           itemJson.id = i;
           break;
         }
