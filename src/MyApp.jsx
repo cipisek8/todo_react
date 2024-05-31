@@ -39,7 +39,7 @@ export default function MyApp() {
   }
 
   function SetUndoneItems() {
-    setUndoneItems(UpdateUndoneItems);
+    setUndoneItems(UpdateUndoneItems());
   }
 
   function UpdateDoneItems() {
@@ -66,7 +66,7 @@ export default function MyApp() {
   }
 
   function SetDoneItems() {
-    setDoneItems(UpdateDoneItems);
+    setDoneItems(UpdateDoneItems());
   }
 
   function AddItem() {

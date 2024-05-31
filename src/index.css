@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -11,6 +11,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 a {
@@ -57,21 +64,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 textarea {
   resize: none;
   overflow-y: auto;
@@ -114,15 +106,17 @@ textarea {
   text-align: left;
   overflow: auto;
   flex-grow: 1;
-max-height: 10vh;
+  max-height: 10vh;
+  align-self: center;
 }
 
-.doneItem > p{
+.doneItem>p {
   overflow: auto;
   text-align: left;
   max-height: 10vh;
   color: gray;
   text-decoration: line-through;
+  align-self: center;
 }
 
 .doneItem {
